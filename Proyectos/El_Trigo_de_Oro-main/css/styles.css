@@ -1,0 +1,530 @@
+/* ==========================================================
+   HOJA DE ESTILOS - PANADERÍA EL TRIGO DE ORO
+   ========================================================== */
+
+/* Variables globales */
+:root {
+    --color-primario: #5c3a21;
+    --color-secundario: #d4a373;
+    --color-acento: #bc6c25;
+    --color-fondo: #fefae0;
+    --color-texto: #2b2b2b;
+    --color-blanco: #ffffff;
+    --color-sombra: rgba(92, 58, 33, 0.15);
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fuente-secundaria: Georgia, serif;
+    --transicion: all 0.3s ease;
+}
+
+/* Reseteo básico y universal */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+}
+
+/* ==========================================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================================== */
+.header {
+    background: linear-gradient(135deg, var(--color-primario), #3b2313);
+    color: var(--color-blanco);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px var(--color-sombra);
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__logo {
+    font-family: var(--fuente-secundaria);
+    font-size: 1.8rem;
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.nav__link {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: var(--transicion);
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    outline: none;
+}
+
+/* ==========================================================
+   SECCIÓN HERO / PRESENTACIÓN
+   ========================================================== */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/hero-bg.jpg') center/cover no-repeat;
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 6rem 1.5rem;
+    border-bottom: 5px solid var(--color-secundario);
+}
+
+.hero__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero__title {
+    font-family: var(--fuente-secundaria);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    animation: fadeInDown 1.2s ease;
+}
+
+.hero__subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #f1f1f1;
+}
+
+.hero__cta {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transicion);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero__cta:hover,
+.hero__cta:focus-visible {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================
+   SECCIÓN DE PRODUCTOS Y TARJETAS
+   ========================================================== */
+.productos, .info-util, .opiniones, .ubicacion, .seccion-tabla, .seccion-formulario {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.section__title {
+    font-family: var(--fuente-secundaria);
+    font-size: 2rem;
+    color: var(--color-primario);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section__title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-acento);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.section__desc {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.productos__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tarjeta {
+    background-color: var(--color-blanco);
+    border: 1px solid #e0d5c1;
+    border-top: 5px solid var(--color-primario);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--color-sombra);
+    transition: var(--transicion);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--color-sombra);
+}
+
+.tarjeta--promo {
+    border-top-color: var(--color-acento);
+}
+
+.tarjeta__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta__body {
+    padding: 1.5rem;
+}
+
+.tarjeta__title {
+    font-size: 1.3rem;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta__desc {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.tarjeta__price {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.tarjeta__old {
+    color: #888;
+}
+
+.tarjeta--promo .tarjeta__price strong {
+    color: var(--color-acento);
+    font-size: 1.1rem;
+}
+
+/* ==========================================================
+   INFORMACIÓN ÚTIL Y LISTAS
+   ========================================================== */
+.info-util__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-box {
+    background-color: var(--color-blanco);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--color-secundario);
+    box-shadow: 0 2px 8px var(--color-sombra);
+}
+
+.info-box h3 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.info-list {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+.info-list li {
+    margin-bottom: 0.5rem;
+}
+
+.info-list--ordered {
+    list-style-type: decimal;
+}
+
+.info-list::marker {
+    color: var(--color-acento);
+}
+
+.info-note {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+}
+
+.info-sup {
+    color: var(--color-acento);
+    font-weight: bold;
+}
+
+/* ==========================================================
+   OPINIONES Y CITAS
+   ========================================================== */
+.opiniones__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.opinion-card {
+    background-color: var(--color-blanco);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-right: 5px solid var(--color-acento);
+    box-shadow: 0 2px 8px var(--color-sombra);
+    font-style: italic;
+}
+
+.opinion-card p {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.opinion-card cite {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    color: var(--color-primario);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================
+   UBICACIÓN / MEDIOS (IFRAME)
+   ========================================================== */
+.ubicacion__text {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.ubicacion__media {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación aspecto 16:9 */
+    height: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--color-sombra);
+}
+
+.ubicacion__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ==========================================================
+   TABLAS Y FORMULARIOS
+   ========================================================== */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--color-sombra);
+}
+
+.tabla-precios {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabla-precios caption {
+    padding: 1rem;
+    font-weight: bold;
+    color: var(--color-primario);
+    font-size: 1.1rem;
+}
+
+.tabla-precios th,
+.tabla-precios td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-precios th {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+.tabla-precios tbody tr:nth-child(even) {
+    background-color: rgba(212, 163, 115, 0.1);
+}
+
+.table__total-label {
+    text-align: right;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+.table__total-price {
+    font-weight: bold;
+    color: var(--color-acento);
+}
+
+.form {
+    background-color: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--color-sombra);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form__group {
+    margin-bottom: 1.5rem;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-primario);
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    transition: var(--transicion);
+}
+
+.form__input:focus-visible,
+.form__select:focus-visible,
+.form__textarea:focus-visible {
+    border-color: var(--color-acento);
+    outline: none;
+    box-shadow: 0 0 5px rgba(188, 108, 37, 0.3);
+}
+
+.form__btn {
+    display: block;
+    width: 100%;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.form__btn:hover,
+.form__btn:focus-visible {
+    background-color: var(--color-acento);
+}
+
+/* ==========================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================== */
+.footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer__link {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================
+   ANIMACIÓN KEYFRAMES
+   ========================================================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================
+   MEDIA QUERY PARA ESCRITORIO Y TABLET (> 768px)
+   ========================================================== */
+@media (min-width: 768px) {
+    .header__container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .productos__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .info-util__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .opiniones__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .hero__title {
+        font-size: 3.5rem;
+    }
+}

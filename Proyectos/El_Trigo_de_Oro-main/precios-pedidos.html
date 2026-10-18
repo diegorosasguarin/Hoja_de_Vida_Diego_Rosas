@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios y Pedidos | Panadería El Trigo de Oro</title>
+    <meta name="description" content="Consulta nuestra tabla de precios detallada y realiza tu pedido o contacto directamente con nuestra panadería artesanal.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">El Trigo de Oro 🍞</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="index.html#productos" class="nav__link">Productos</a></li>
+                    <li class="nav__item"><a href="index.html#info" class="nav__link">Información</a></li>
+                    <li class="nav__item"><a href="index.html#opiniones" class="nav__link">Opiniones</a></li>
+                    <li class="nav__item"><a href="precios-pedidos.html" class="nav__link">Precios y Pedidos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="seccion-tabla">
+            <h1 class="section__title">Tabla de Precios y Tarifas</h1>
+            <p class="section__desc">Consulta aquí nuestros productos disponibles, categorías y valores vigentes.</p>
+            
+            <div class="table-container">
+                <table class="tabla-precios">
+                    <caption>Menú General y Tarifas 2026</caption>
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Producto / Servicio</th>
+                            <th>Presentación</th>
+                            <th>Precio Unitario ($)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Panadería Tradicional</td>
+                            <td>Pan Rústico con Masa Madre</td>
+                            <td>Unidad (500g)</td>
+                            <td>$3.800 (Oferta)</td>
+                        </tr>
+                        <tr>
+                            <td>Pan Blandito de Leche</td>
+                            <td>Paquete x 6 unidades</td>
+                            <td>$4.000</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Bollería Fina</td>
+                            <td>Croissant de Mantequilla</td>
+                            <td>Unidad</td>
+                            <td>$2.500</td>
+                        </tr>
+                        <tr>
+                            <td>Roll de Canela Glaseado</td>
+                            <td>Unidad</td>
+                            <td>$3.200</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="table__total-label">Combo Familiar (Incluye Café de 12oz + 4 Panes + 2 Croissants)</td>
+                            <td class="table__total-price">$15.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="pedido" class="seccion-formulario">
+            <h2 class="section__title">Formulario de Pedidos y Contacto</h2>
+            <p class="section__desc">Llena el siguiente formulario y nos pondremos en contacto contigo de inmediato.</p>
+
+            <form action="https://formspree.io/f/tu-correo" method="POST" class="form">
+                <div class="form__group">
+                    <label for="nombre" class="form__label">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" class="form__input" required placeholder="Ej. Ana María Pérez">
+                </div>
+
+                <div class="form__group">
+                    <label for="correo" class="form__label">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" class="form__input" required placeholder="tu-correo@example.com">
+                </div>
+
+                <div class="form__group">
+                    <label for="telefono" class="form__label">Número de teléfono / WhatsApp:</label>
+                    <input type="tel" id="telefono" name="telefono" class="form__input" required placeholder="3001234567">
+                </div>
+
+                <div class="form__group">
+                    <label for="producto-elegido" class="form__label">Selecciona el producto principal:</label>
+                    <select id="producto-elegido" name="producto" class="form__select">
+                        <option value="pan-rustico">Pan Rústico con Masa Madre - $3.800</option>
+                        <option value="croissant">Croissant de Mantequilla - $2.500</option>
+                        <option value="pastel-chocolate">Pastel de Chocolate - $6.000</option>
+                        <option value="combo-familiar">Combo Familiar - $15.000</option>
+                    </select>
+                </div>
+
+                <div class="form__group">
+                    <label for="mensaje" class="form__label">Observaciones o dirección de entrega:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" class="form__textarea" placeholder="Indica detalles de tu dirección o instrucciones especiales..."></textarea>
+                </div>
+
+                <button type="submit" class="form__btn">Enviar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2026 Panadería Artesanal El Trigo de Oro. Todos los derechos reservados.</p>
+            <p>Síguenos en <a href="https://instagram.com" target="_blank" rel="noopener" class="footer__link">Instagram</a></p>
+        </div>
+    </footer>
+</body>
+</html>
