@@ -304,6 +304,31 @@ body {
   }
 }
 
+
+.mi-boton {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2563eb;       /* Azul vibrante */
+    color: #ffffff;                  /* Texto blanco */
+    padding: 16px 24px;              /* Relleno interno */
+    width: 170px;                    /* Ancho similar a la imagen */
+    border-radius: 12px;             /* Bordes redondeados */
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-weight: 600;                /* Texto en negrita */
+    font-size: 16px;
+    text-align: left;                /* Alineación a la izquierda */
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3); /* Sombra flotante */
+    transition: all 0.2s ease;
+}
+
+.mi-boton:hover {
+    background-color: #1d4ed8;       /* Azul un poco más oscuro al pasar el cursor */
+    transform: translateY(-2px);      /* Efecto de elevación */
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.4);
+}
+
+
+
 /* R3 & R4: Breakpoint 2 - Computador (1024px en adelante) */
 /* R4: Cambio explicito del Grid por áreas a 2 columnas */
 @media (min-width: 1024px) {
@@ -328,27 +353,5 @@ body {
     text-align: left;
     padding: 2.25rem 2rem;
   }
-
-.mi-boton {
-    display: inline-block;
-    text-decoration: none;
-    background-color: #2563eb;       /* Azul vibrante */
-    color: #ffffff;                  /* Texto blanco */
-    padding: 16px 24px;              /* Relleno interno */
-    width: 170px;                    /* Ancho similar a la imagen */
-    border-radius: 12px;             /* Bordes redondeados */
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    font-weight: 600;                /* Texto en negrita */
-    font-size: 16px;
-    text-align: left;                /* Alineación a la izquierda */
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3); /* Sombra flotante */
-    transition: all 0.2s ease;
-}
-
-.mi-boton:hover {
-    background-color: #1d4ed8;       /* Azul un poco más oscuro al pasar el cursor */
-    transform: translateY(-2px);      /* Efecto de elevación */
-    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.4);
-}
 
 }
