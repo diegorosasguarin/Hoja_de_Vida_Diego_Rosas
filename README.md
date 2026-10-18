@@ -2,7 +2,7 @@
 
 Sitio web personal, responsive e interactivo con hoja de vida profesional y páginas de portafolio interconectadas, desarrollado con HTML5 semántico y CSS3 Grid Layout.
 
-**Sitio publicado en GitHub Pages:** https://diegorosasguarin.github.io/hoja-de-vida/
+**Sitio publicado en GitHub Pages:** https://diegorosasguarin.github.io/Hoja_de_Vida_Diego_Rosas/index.html
 
 ---
 
